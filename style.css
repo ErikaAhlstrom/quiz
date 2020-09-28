@@ -1,3 +1,33 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(92, 198, 240);
+}
+.button {
+    display: inline-block;
+    margin: 30px 0;
+    padding: 15px;
+    font-size: 1.1em;
+}
+
+#container {
+    width: 800px;
+    max-width: 80%; 
+    background-color: rgb(255, 255, 255); 
+    border-radius: 5px;
+    padding: 10px;
+}
+
 
 .display_none {
     display: none;
