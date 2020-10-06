@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="quiz-header">QUIZ!</h1>
+        <div id="container-div" >
+            <div id = "gameContainer" class="container hide">
+                <div id="question-container">
+                    <h3 id="question-header">Q nr: 1 </h3>
+                    <div id="question">Question</div>
+                    <div id="answer-buttons" class="btn-grid"></div>
+                </div>
+                <div class="controls">
+                    <button id="next-btn" class="next-btn btn">Next</button>
+                    <button id="play-again-btn" class="next-btn btn hide">Play Again</button>
+                </div>
+            </div>
+            <div id="startContainer" >
+                <div id="labelInputContainer">
+                    <label>Name: </label>
+                    <input type="text" id="nameInput"><br>
+                    <label id="questionsLabel">How many questions?</label>
+                    <div id="numberOfQuestions">
+                        <button type="button" class="numberOfQuestions btn" id="5question">5</button>
+                        <button type="button" class="numberOfQuestions btn" id="6question">6</button>
+                        <button type="button" class="numberOfQuestions btn" id="7question">7</button>
+                        <button type="button" class="numberOfQuestions btn" id="8question">8</button>
+                        <button type="button" class="numberOfQuestions btn" id="9question">9</button>
+                        <button type="button" class="numberOfQuestions btn" id="10question">10</button>
+                    </div>
+                </div>
+                <button id="start_btn" class="start-btn btn">Start</button>
+            </div>
+         </div>
+    <script src="js/player.js"></script>
+    <script src="js/quiz_item.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
