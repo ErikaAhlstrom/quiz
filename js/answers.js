@@ -1,7 +1,0 @@
-
-class Answers {
-    constructor() {
-
-    }
-}
-
