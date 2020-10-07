@@ -2,14 +2,7 @@ class Player {
     constructor() {
         this.name;
         this.score;
-    }
-
-    printName() {
-        console.log(this.name);
-    }
-
-    printScore() {
-        console.log(this.score);
+        this.max_questions;
     }
 
     calcMaxQuestions(e) {
@@ -27,10 +20,33 @@ class Player {
             e.target.classList.remove("start_clicked");
         }
 
-        let picked_value = Number(document.querySelector(".start_clicked").innerHTML);
-        //this.max_questions = picked_value;
+        this.max_questions = Number(document.querySelector(".start_clicked").innerHTML);
 
-        return picked_value;
+        //return picked_value;
+    }
+
+    saveName() {
+        this.name = document.getElementById("nameInput").value;
+    }
+
+    getCorrectScore(user_answers, correct_answers) {
+
+        let pop_amount = correct_answers.length - user_answers.length;
+
+        for (let i = 0; i < pop_amount; i++) {
+            correct_answers.pop();
+        }
+
+        let checked_answers = 0;
+        for (let i = 0; i < correct_answers.length; i++) {
+            if(correct_answers[i] === user_answers[i]){
+                checked_answers++
+            } 
+        } 
+
+        if (checked_answers === correct_answers.length) {
+            this.score++;
+        }
     }
 
 

@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700&family=Quicksand&display=swap" rel="stylesheet"></head>
 <body>
-    <h1 id="quiz-header">QUIZ!</h1>
+    <div id="header-container">
+    <h1 id="quiz-header">QUIZ</h1>
+    </div>
         <div id="container-div" >
             <div id = "gameContainer" class="container hide">
                 <div id="question-container">
@@ -16,13 +17,13 @@
                     <div id="answer-buttons" class="btn-grid"></div>
                 </div>
                 <div class="controls">
-                    <button id="next-btn" class="next-btn btn">Next</button>
-                    <button id="play-again-btn" class="next-btn btn hide">Play Again</button>
+                    <button id="next-btn" class="next-btn btn">NEXT</button>
+                    <button id="play-again-btn" class="next-btn btn hide">PLAY AGAIN</button>
                 </div>
             </div>
             <div id="startContainer" >
                 <div id="labelInputContainer">
-                    <label>Name: </label>
+                    <label>What's you name? </label> <br>
                     <input type="text" id="nameInput"><br>
                     <label id="questionsLabel">How many questions?</label>
                     <div id="numberOfQuestions">
@@ -34,7 +35,7 @@
                         <button type="button" class="numberOfQuestions btn" id="10question">10</button>
                     </div>
                 </div>
-                <button id="start_btn" class="start-btn btn">Start</button>
+                <button id="start_btn" class="start-btn btn">START</button>
             </div>
          </div>
     <script src="js/player.js"></script>
