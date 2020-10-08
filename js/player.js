@@ -16,14 +16,18 @@ class Player {
         } else {
             e.target.classList.add("start_clicked");
         }
-       
+        let number_of_questions = document.getElementsByClassName("n-o-q");
         let picked_questions = document.getElementsByClassName("start_clicked");
         if(picked_questions.length >1){
             alert("You can only pick one alternative!"); 
             e.target.classList.remove("start_clicked");
         }
 
-        this.max_questions = Number(document.querySelector(".start_clicked").innerHTML);
+        for (let question of number_of_questions) {
+            if(question.classList.contains("start_clicked")) {
+            this.max_questions = Number(document.querySelector(".start_clicked").innerHTML);
+            }
+        }
     }
 
     // Håller koll på Spelarens namn.

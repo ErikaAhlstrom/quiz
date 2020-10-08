@@ -43,7 +43,7 @@ class Game {
     startButton() {
         this.start_button = document.getElementById("start-btn");
         this.start_button.addEventListener("click", (e) => {
-
+            
             this.player.saveName();
             if (this.player.name === "") {
                 alert("You have to write a name!")
@@ -123,7 +123,9 @@ class Game {
     checkNumberOfQuestions() {
         this.number_of_questions = document.getElementById("number-of-questions");
         this.number_of_questions.addEventListener("click", (e) => {
+            if (e.target.nodeName === "BUTTON") {
             this.player.saveMaxQuestions(e);
+            }
         });  
     }
 
@@ -142,7 +144,6 @@ class Game {
             }        
         } 
         let correct_answers = Object.values(this.quiz_items[this.current_question].correct_answers);
-        console.log(this.quiz_items[this.current_question].correct_answers)
         this.player.getCorrectScore(user_answers, correct_answers);
     }
 

@@ -18,10 +18,11 @@ window.addEventListener('DOMContentLoaded', function(e){
 /*===========================================
                     TO DO
 (x) Spelaren måste fylla i namn, annars alert
-() Ge felmeddelande om API inte kunde hämtas
-() Går så inte hela number-of-questions är klickbar, bara knappar
-() Snyggare sätt att starta om spelet 
-() Gör quiz header lika bred som game container
+(x) Fixa bugg när man klickar ur en number of questions knapp
+( ) Ge felmeddelande om API inte kunde hämtas
+(x) Går så inte hela number-of-questions är klickbar, bara knappar
+( ) Snyggare sätt att starta om spelet 
+( ) Gör quiz header lika bred som game container
 
 ===========================================*/
 
