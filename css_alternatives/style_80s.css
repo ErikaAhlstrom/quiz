@@ -1,17 +1,17 @@
-/*
-Färgschema:
-https://coolors.co/f7b267-f79d65-f4845f-f27059-f25c54
-*/
-
 *, *::before, *::after {
     box-sizing: border-box;
-    font-family: 'Inter', bold;
-}
+    font-family: 'Inter', bold;}
 
 body {
-    background-color:#F27059;
+    background-color:#E56399;
     color: #3f3332;
     font-size: 1.2em;
+    
+/*     color: #2d1e2f;
+    color:#e3170a;
+    color: #a9e5bb;
+    color: #fcf6b1;
+    color: #f7b32b; */
 
 }
 
@@ -28,14 +28,74 @@ input {
 
 input:focus {
     outline: none;    
-    background-color: #54a58b71;
-    color: white;  
+    background-color: #DE6E4B;
+    color: white;
+    
+    
+} 
+
+#header-container {
+    justify-content: center;
+    align-items: center;
+    color: #7FD1B9;
+    text-align: center;  
+    border-radius: 5px;
+    border: 10px solid  #E5D4CE;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    margin-bottom: 20%;
+
+  
+
 }
 
-#label-input-container > label {
-    padding: 20px 0;
-    border: 30px;
-    margin-top: 50px;
+
+#container-div {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    width: 100vw;
+    height: 25vh;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.container {
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: 10px solid  #E5D4CE;
+
+}
+
+#startContainer {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    max-width: 80%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 30px;
+    border: 10px solid  #E5D4CE;
+
+
+}
+
+.btn-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    margin: 20px 0;
+    
+}
+.btn-grid > button {
+    font-size: 0.8em;
+
 }
 
 .btn {
@@ -45,17 +105,12 @@ input:focus {
     border-radius: 5px;
     padding: 5px 10px;
     outline: none;
+
 }
 
-.btn-grid > button {
-    font-size: 0.8em;
-}
-
-.btn-grid {
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    gap: 10px;
-    margin: 20px 0;
+.btn:hover {
+    border-color: black;
+    background-color: #7A6563;
 }
 
 .start-btn, .next-btn, .lock-btn {
@@ -70,77 +125,26 @@ input:focus {
     margin: 20;
 }
 
-#number-of-questions > button {
+#numberOfQuestions > button {
     grid-template-columns: repeat(2, auto);
     gap: 10px;
     margin: 20px 0;
     width: 40px;
     justify-content: center;
     font-size: 1em;
+   
 }
 
-.btn:hover {
-    border-color: black;
-    background-color: #F7B267;
-}
-
-.clicked:hover, .start_clicked:hover {
-    background-color: #F79D65;
-}
-
-.clicked, .start_clicked  {
-    background-color: #F25C54;
-}
-
-#header-container {
+#labelInputContainer {
     justify-content: center;
     align-items: center;
-    color: #7FD1B9;
-    text-align: center;  
-    border-radius: 5px;
-    border: 10px solid  #E5D4CE;
-    margin: auto;
-    background-color: white;
-    display: flex;
-    margin-bottom: 20%;
+        
 }
 
-#container-div {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    width: 100vw;
-    height: 25vh;
-    justify-content: center;
-    align-items: center;
-  }
-
-.container {
-    width: 800px;
-    max-width: 80%;
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-    border: 10px solid  #E5D4CE;
-
-}
-
-#start-container {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    width: 800px;
-    max-width: 80%;
-    background-color: white;
-    border-radius: 5px;
-    padding: 30px;
-    border: 10px solid  #E5D4CE;
-}
-
-
-#label-input-container {
-    justify-content: center;
-    align-items: center;     
+#labelInputContainer > label {
+    padding: 20px 0;
+    border: 30px;
+    margin-top: 50px;
 }
 
 
@@ -148,6 +152,13 @@ input:focus {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.clicked:hover, .start_clicked:hover {
+    background-color: #DE6E4B;
+}
+.clicked, .start_clicked  {
+    background-color: #DE6E4B;
 }
 
 .hide {

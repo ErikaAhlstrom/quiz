@@ -41,7 +41,7 @@ class Game {
 // ================================================================================== */
 
     startButton() {
-        this.start_button = document.getElementById("start_btn");
+        this.start_button = document.getElementById("start-btn");
         this.start_button.addEventListener("click", (e) => {
             this.player.saveName();
             this.playGame()
@@ -82,16 +82,15 @@ class Game {
     playAgainButton() {
         this.play_again_button = document.getElementById("play-again-btn");
         this.play_again_button.addEventListener("click", (e) => {
-            //quiz.playGame();
             location.reload();
         });
     }
     
-    // 
+    // Körs på start kanpp. Skriver ut fråga o svar från klass quizItem 
     playGame() {
         this.quiz_header = document.getElementById("quiz-header");
-        this.start_container = document.getElementById("startContainer");
-        this.game_container = document.getElementById("gameContainer");
+        this.start_container = document.getElementById("start-container");
+        this.game_container = document.getElementById("game-container");
         this.question_counter = document.getElementById("question-header");
 
         this.game_container.classList.remove("hide");
@@ -105,6 +104,7 @@ class Game {
         this.quiz_items[this.current_question].printCurrentQuestion();
     }
 
+    // Körs på next-button sista frågan. Skriver ut score.
     endGame() {
         this.questionsContainer = document.getElementById("question-container")
         this.play_again_button.classList.remove("hide");
@@ -113,15 +113,16 @@ class Game {
         this.question_counter.innerHTML = "";
     }
 
-
+    // Kollar hur många frågor spelaren vill ha.
     checkNumberOfQuestions() {
-        this.number_of_questions = document.getElementById("numberOfQuestions");
+        this.number_of_questions = document.getElementById("number-of-questions");
         this.number_of_questions.addEventListener("click", (e) => {
-            this.player.calcMaxQuestions(e);
+            this.player.saveMaxQuestions(e);
         });  
     }
 
-
+    // Skapar 2 arrayer, en med rätta svaren och en med användarens svar.
+    // Skickar till getCorrectScore i player klassen
     getCorrectAnswers() {
         let answer_buttons = Array.from(document.getElementsByClassName("current-btns"));
         let user_answers = [];
@@ -134,7 +135,7 @@ class Game {
                 user_answers[i] = "false";
             }        
         } 
-
+        // Kolla om Object.values behövs
         let correct_answers = Object.values(this.quiz_items[this.current_question].correct_answers);
         this.player.getCorrectScore(user_answers, correct_answers);
     }

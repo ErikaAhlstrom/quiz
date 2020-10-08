@@ -1,11 +1,14 @@
 class Player {
     constructor() {
+        // Egenskaper som rör player.
         this.name;
         this.score;
         this.max_questions;
     }
 
-    calcMaxQuestions(e) {
+    // Håller koll på hur många frågor spelaren vill ha i max_questions. 
+    // Kan bara välja ett alternativ.
+    saveMaxQuestions(e) {
 
         if(e.target.classList.contains("start_clicked")) {
             e.target.classList.remove("start_clicked");
@@ -21,14 +24,14 @@ class Player {
         }
 
         this.max_questions = Number(document.querySelector(".start_clicked").innerHTML);
-
-        //return picked_value;
     }
 
+    // Håller koll på Spelarens namn.
     saveName() {
-        this.name = document.getElementById("nameInput").value;
+        this.name = document.getElementById("name-input").value;
     }
 
+    // Kollar om spelaren svarat rätt och ger i så fall poång.
     getCorrectScore(user_answers, correct_answers) {
 
         let pop_amount = correct_answers.length - user_answers.length;
