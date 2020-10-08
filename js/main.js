@@ -17,7 +17,7 @@ window.addEventListener('DOMContentLoaded', function(e){
 
 /*===========================================
                     TO DO
-() Spelaren måste fylla i namn, annars alert
+(x) Spelaren måste fylla i namn, annars alert
 () Ge felmeddelande om API inte kunde hämtas
 () Går så inte hela number-of-questions är klickbar, bara knappar
 () Snyggare sätt att starta om spelet 

@@ -29,6 +29,7 @@ class Player {
     // Håller koll på Spelarens namn.
     saveName() {
         this.name = document.getElementById("name-input").value;
+
     }
 
     // Kollar om spelaren svarat rätt och ger i så fall poång.

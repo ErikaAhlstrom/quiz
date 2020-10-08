@@ -43,8 +43,14 @@ class Game {
     startButton() {
         this.start_button = document.getElementById("start-btn");
         this.start_button.addEventListener("click", (e) => {
+
             this.player.saveName();
+            if (this.player.name === "") {
+                alert("You have to write a name!")
+            } else {
             this.playGame()
+            }
+            
         })
     }
 /* ================================================================================== //
@@ -135,8 +141,8 @@ class Game {
                 user_answers[i] = "false";
             }        
         } 
-        // Kolla om Object.values behövs
         let correct_answers = Object.values(this.quiz_items[this.current_question].correct_answers);
+        console.log(this.quiz_items[this.current_question].correct_answers)
         this.player.getCorrectScore(user_answers, correct_answers);
     }
 
