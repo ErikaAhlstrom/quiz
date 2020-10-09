@@ -60,7 +60,6 @@ class Game {
     nextButton() {
         this.next_button = document.getElementById("next-btn");
         this.next_button.addEventListener("click", (e) => {
-            console.log("NEXT BUTTON");
             this.getCorrectAnswers();    
             console.log("current score = " + this.player.score);  
 

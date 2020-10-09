@@ -16,7 +16,7 @@ class Player {
         } else {
             e.target.classList.add("start_clicked");
         }
-        let number_of_questions = document.getElementsByClassName("n-o-q");
+        let number_of_questions = document.getElementsByClassName("number-of-questions");
         let picked_questions = document.getElementsByClassName("start_clicked");
         if(picked_questions.length >1){
             alert("You can only pick one alternative!"); 
